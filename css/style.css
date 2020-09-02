@@ -6,7 +6,7 @@
 
   /* === Fonts === */
   --primary-background-color: #f1f1e8;
-  --secondary-background-color: ;
+  --secondary-background-color: #206a5d;
   --primary-color: #303030;
   --secondary-color: #64b157;
 }
@@ -30,6 +30,33 @@ a:visited {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 17.33px;
+}
+
+.section-title {
+  font-family: var(--big-heading-font-family);
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 5px;
+  letter-spacing: 0.05rem;
+}
+
+.section-title::after {
+  content: '';
+  width: 6%;
+  height: 4px;
+  border-bottom: 4px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  background-color: var(--secondary-background-color);
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
 }
 
 /* ========= HEADER ========= */
@@ -126,10 +153,50 @@ header {
   -o-border-radius: 25px;
   color: var(--primary-background-color);
   text-transform: capitalize;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
 }
 
 .btn-more-info:hover {
   border: 1px solid var(--primary-background-color);
   background-color: transparent;
   color: var(--secondary-color);
+}
+
+/* ========= FEATURES ========= */
+.section-features {
+  padding: 70px 10%;
+}
+
+.features {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.feature {
+  width: 28%;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.feature-icon {
+  color: var(--secondary-color);
+  font-size: 3rem;
+}
+
+.feature-name {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 10px 0;
+}
+
+.feature-info {
+  font-weight: 300;
+  line-height: 1.2;
 }
