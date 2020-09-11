@@ -37,9 +37,9 @@ a:visited {
 }
 
 .btn {
-  padding: 10px 20px;
+  padding: 10px 40px;
   font-size: 1.5rem;
-  width: 200px;
+  /* width: 200px; */
   background-color: var(--secondary-color);
   border: 1px solid var(--secondary-color);
   cursor: pointer;
@@ -458,4 +458,37 @@ header {
   to {
     opacity: 1;
   }
+}
+
+/* ========= SIGN UP ========= */
+.section-sign-up {
+  padding: 60px 2%;
+  text-align: center;
+}
+
+.sign-up {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.section-sign-up .btn-sign-up {
+  margin-top: 20px;
+  /* width: 20%; */
+  font-size: 3rem;
+  border-radius: 45px;
+  -webkit-border-radius: 45px;
+  -moz-border-radius: 45px;
+  -ms-border-radius: 45px;
+  -o-border-radius: 45px;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+
+.section-sign-up .btn-sign-up:hover {
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-background-color);
+  background-color: var(--secondary-background-color);
 }
