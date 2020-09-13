@@ -1,4 +1,15 @@
 /* ========== VARIABLES ========= */
+/* === Main navigation === */
+// Get the navbar
+const logoNav = document.querySelector('.logo-nav');
+// Get the offset position of the navbar
+let sticky = logoNav.offsetTop;
+
+/* === Buttons === */
+const btnMoreInfo = document.querySelector('.btn-more-info');
+const backToTop = document.querySelector('.back-to-top');
+
+/* === Testimonials slideshow === */
 // Prev & next buttons
 const btnPrev = document.querySelector('.btn-prev');
 const btnNext = document.querySelector('.btn-next');
@@ -16,6 +27,17 @@ let testimonialIndex = 1;
 showTestimonies(testimonialIndex);
 
 /* ========== FUNCTIONS ========= */
+/* === Main navigation === */
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function stickyNavbar() {
+    if (window.pageYOffset >= sticky) {
+        logoNav.classList.add("sticky")
+    } else {
+        logoNav.classList.remove("sticky");
+    }
+};
+
+/* === Testimonials slideshow === */
 // Next or prev controls
 function plusTestimonies(n) {
     showTestimonies(testimonialIndex += n);
@@ -51,7 +73,31 @@ function showTestimonies(n) {
     dots[testimonialIndex - 1].className += " active";
 };
 
+/* === Scroll back to top === */
+function scrollBackToTop() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTop.style.display = "block";
+    } else {
+        backToTop.style.display = "none";
+    }
+};
+
 /* ========== EVENT LISTENERS ========= */
+/* === Main navigation & back to top === */
+window.addEventListener('scroll', () => {
+    stickyNavbar();
+    scrollBackToTop();
+});
+
+/* === Buttons === */
+// More info button
+btnMoreInfo.addEventListener('click', () => {
+    const featuresEl = document.getElementById('features');
+
+    featuresEl.scrollIntoView();
+});
+
+/* === Testimonials slideshow === */
 // Prev & next buttons
 btnPrev.addEventListener('click', () => {
     plusTestimonies(-1);
@@ -73,4 +119,10 @@ dot3.addEventListener('click', () => {
 });
 dot4.addEventListener('click', () => {
     currentTestimony(4);
+});
+
+/* === Scroll back to top === */
+backToTop.addEventListener('click', () => {
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
 });
