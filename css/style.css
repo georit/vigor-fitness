@@ -127,7 +127,7 @@ header {
 .logo-nav {
   display: flex;
   align-items: center;
-  padding: 45px 7%;
+  padding: 0 7% 45px;
 }
 
 .sticky {
