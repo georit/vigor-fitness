@@ -47,11 +47,11 @@ a:visited {
   border: 1px solid var(--secondary-color);
   color: var(--primary-background-color);
   cursor: pointer;
-  border-radius: 25px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
-  -o-border-radius: 25px;
+  border-radius: 45px;
+  -webkit-border-radius: 45px;
+  -moz-border-radius: 45px;
+  -ms-border-radius: 45px;
+  -o-border-radius: 45px;
   text-transform: capitalize;
   transition: all 0.2s;
   -webkit-transition: all 0.2s;
@@ -462,4 +462,34 @@ header {
   to {
     opacity: 1;
   }
+}
+
+/* ========= SIGN UP ========= */
+.section-sign-up {
+  padding: 6vh 2%;
+  text-align: center;
+}
+
+.sign-up {
+  font-size: 1rem;
+  text-transform: capitalize;
+  line-height: 1.1;
+  padding-top: 0.8rem;
+}
+
+.section-sign-up .btn-sign-up {
+  margin-top: 3vh;
+  font-size: 1rem;
+  border-radius: 45px;
+  -webkit-border-radius: 45px;
+  -moz-border-radius: 45px;
+  -ms-border-radius: 45px;
+  -o-border-radius: 45px;
+  text-transform: uppercase;
+}
+
+.section-sign-up .btn-sign-up:active {
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-background-color);
+  background-color: var(--secondary-background-color);
 }
