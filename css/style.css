@@ -480,11 +480,6 @@ header {
 .section-sign-up .btn-sign-up {
   margin-top: 3vh;
   font-size: 1rem;
-  border-radius: 45px;
-  -webkit-border-radius: 45px;
-  -moz-border-radius: 45px;
-  -ms-border-radius: 45px;
-  -o-border-radius: 45px;
   text-transform: uppercase;
 }
 
@@ -546,7 +541,7 @@ footer {
 /* === Footer navigation & Location === */
 .footer-nav {
   display: flex;
-  flex-flow: nowrap;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
   order: 1;
@@ -657,95 +652,29 @@ footer {
 }
 
 /* ========= MEDIA QUERIES ========= */
-/* === Small screens === */
-@media only screen and (min-width: 992px) {
+/* === Large screens minimum width 1200px === */
+@media only screen and (min-width: 1200px) {
   /* ========= GENERAL ========= */
-  html {
-    scroll-behavior: smooth;
-  }
-
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  body {
-    font-family: var(--primary-font-family);
-    font-size: 16px;
-    background-color: var(--primary-background-color);
-  }
-
-  img {
-    max-width: 100%;
-  }
-
   a:link,
   a:visited {
-    color: var(--primary-background-color);
-    text-decoration: none;
-    text-transform: uppercase;
     font-size: 17.33px;
   }
 
   .btn {
-    padding: 10px 40px;
+    padding: 0.625rem 2.5rem;
     font-size: 1.5rem;
-    /* width: 200px; */
-    background-color: var(--secondary-color);
-    border: 1px solid var(--secondary-color);
-    cursor: pointer;
-    border-radius: 25px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    -ms-border-radius: 25px;
-    -o-border-radius: 25px;
-    color: var(--primary-background-color);
-    text-transform: capitalize;
-    transition: all 0.2s;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -ms-transition: all 0.2s;
-    -o-transition: all 0.2s;
   }
 
   .section-title {
-    font-family: var(--big-heading-font-family);
     font-size: 2rem;
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
-    position: relative;
-    padding-bottom: 5px;
+    padding-bottom: 0.3125rem;
     letter-spacing: 0.05rem;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
   }
 
   .section-title::after {
-    content: "";
     width: 6%;
     height: 4px;
-    border-radius: 2px;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    background-color: var(--secondary-background-color);
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -o-border-radius: 2px;
-  }
-
-  .wrapper {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
   }
 
   .insta,
@@ -758,24 +687,30 @@ footer {
     -o-transition: all 0.2s;
   }
 
+  .wrapper {
+    flex-flow: row wrap;
+  }
+
   /* ========= HEADER ========= */
   header {
-    background: linear-gradient(rgba(47, 50, 76, 0.95), rgba(47, 50, 76, 0.95)),
-      url(/img/header-background-img.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     height: 100vh;
   }
 
   .empty {
+    display: block;
     height: 50px;
   }
 
   .logo-nav {
     display: flex;
+    flex-direction: row;
     align-items: center;
     padding: 0 7% 45px;
+    position: static;
+    top: unset;
+    background-color: unset;
+    width: unset;
+    z-index: unset;
   }
 
   .sticky {
@@ -793,17 +728,27 @@ footer {
 
   .logo {
     margin-right: auto;
+    padding: unset;
+  }
+
+  .main-nav {
+    display: unset;
+    height: unset;
+    padding-top: unset;
+    margin-left: unset;
   }
 
   .main-nav .nav-link {
     border: 2px solid transparent;
     margin-left: 40px;
-    padding-bottom: 3px;
+    padding: 0 0 3px;
     transition: all 0.2s;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     -ms-transition: all 0.2s;
     -o-transition: all 0.2s;
+    text-align: unset;
+    width: unset;
   }
 
   .main-nav .nav-link:hover {
@@ -811,6 +756,7 @@ footer {
   }
 
   .main-nav .nav-link:last-child {
+    background-color: unset;
     border: 2px solid var(--secondary-color);
     border-radius: 15px;
     padding: 7px 10px;
@@ -829,27 +775,27 @@ footer {
     background-color: var(--secondary-color);
   }
 
+  .hamburger-menu {
+    display: none;
+  }
+
+  /* === Heading === */
   .heading {
     margin: 153px 10% 0;
     text-align: center;
     color: var(--primary-background-color);
+    padding-top: unset;
   }
 
   .main-title {
-    font-family: var(--big-heading-font-family);
-    text-transform: uppercase;
     font-size: 3rem;
-    font-weight: 900;
     letter-spacing: 0.8px;
     line-height: 1.2;
     padding-bottom: 20px;
   }
 
   .sub-title {
-    text-transform: capitalize;
     font-size: 1.5rem;
-    line-height: 1.2;
-    font-weight: 100;
     padding-bottom: 50px;
   }
 
@@ -871,20 +817,12 @@ footer {
   }
 
   .feature-icon {
-    color: var(--secondary-color);
     font-size: 3rem;
   }
 
   .feature-name {
     font-size: 1.2rem;
-    font-weight: 400;
-    text-transform: uppercase;
     padding: 10px 0;
-  }
-
-  .feature-info {
-    font-weight: 300;
-    line-height: 1.2;
   }
 
   /* ========= PROGRAMS ========= */
@@ -1154,18 +1092,7 @@ footer {
 
   .section-sign-up .btn-sign-up {
     margin-top: 60px;
-    /* width: 20%; */
     font-size: 2rem;
-    border-radius: 45px;
-    -webkit-border-radius: 45px;
-    -moz-border-radius: 45px;
-    -ms-border-radius: 45px;
-    -o-border-radius: 45px;
-    transition: all 0.2s;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -ms-transition: all 0.2s;
-    -o-transition: all 0.2s;
     text-transform: uppercase;
   }
 
@@ -1177,11 +1104,14 @@ footer {
 
   /* ========= FOOTER ========= */
   footer {
-    background-color: var(--secondary-background-color);
-    color: var(--primary-background-color);
+    display: block;
     margin-top: 40px;
     padding: 30px 10% 10px;
     position: relative;
+  }
+
+  .footer-title {
+    font-size: unset;
   }
 
   .contact-info {
@@ -1198,23 +1128,9 @@ footer {
   }
 
   .contact-info .footer-title::after {
-    content: "";
     width: 30%;
     height: 2px;
-    border-radius: 2px;
     position: absolute;
-    top: 100%;
-    left: 15%;
-    background-color: var(--secondary-color);
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -o-border-radius: 2px;
   }
   /* === Footer navigation & Location === */
   .footer-nav {
@@ -1222,6 +1138,12 @@ footer {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
+    order: unset;
+    padding: unset;
+  }
+
+  .footer-nav h4 {
+    display: block;
   }
 
   .footer-nav .nav-title {
@@ -1244,23 +1166,33 @@ footer {
   .city,
   .state,
   .footer-nav .nav-link {
-    text-transform: capitalize;
-    font-weight: 100;
-    line-height: 1.2;
     font-size: 1rem;
+    margin: unset;
   }
 
   /* === Social Media === */
   .media-link {
+    padding-top: unset;
     padding-right: 10px;
   }
 
   /* === Contact === */
+  .social-media {
+    padding: unset;
+  }
+
+  .contact {
+    order: unset;
+    width: unset;
+  }
+
   .contact-form input,
   .contact-form textarea {
+    font-size: unset;
     margin: 4px 0;
     line-height: 1.2;
     padding: 2px;
+    width: 100%;
   }
 
   .contact-form textarea {
@@ -1271,23 +1203,22 @@ footer {
     font-size: 0.9rem;
     padding: 2px;
     cursor: pointer;
+    width: unset;
+  }
+
+  .location {
+    display: block;
   }
 
   /* === Back to top button === */
   .back-to-top {
-    background-color: transparent;
-    border: none;
-    text-transform: capitalize;
-    color: var(--primary-background-color);
-    position: fixed;
     bottom: 20px;
     right: 30px;
-    cursor: pointer;
+    font-size: unset;
   }
 
   .back-to-top i {
     font-size: 2.5rem;
-    color: var(--secondary-color);
     padding-bottom: 4px;
   }
 
@@ -1297,13 +1228,7 @@ footer {
   }
 
   .copyright-info {
-    width: 100%;
     margin: 30px auto 0;
-    text-align: center;
-    font-weight: 100;
-  }
-
-  .dev-name {
-    font-weight: 400;
+    font-size: unset;
   }
 }

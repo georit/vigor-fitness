@@ -123,9 +123,18 @@ navLinks.forEach((navLink) => {
 /* === Buttons === */
 // More info button
 btnMoreInfo.addEventListener("click", () => {
+  const featuresEl = document.getElementById("features");
   const programsEl = document.getElementById("programs");
+  const viewWidth = Math.max(
+    document.documentElement.clientWidth || 0,
+    window.innerWidth || 0
+  );
 
-  programsEl.scrollIntoView();
+  if (viewWidth < 1200) {
+    programsEl.scrollIntoView();
+  } else {
+    featuresEl.scrollIntoView();
+  }
 });
 
 /* === Testimonials slideshow === */
