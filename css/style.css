@@ -270,3 +270,66 @@ header {
 .learn-more i {
   font-size: 0.8rem;
 }
+
+/* ========= TEAM ========= */
+.section-team {
+  padding: 4vh 10%;
+}
+
+.section-team .wrapper {
+  align-items: center;
+}
+
+.team-member {
+  width: 90%;
+  margin: 0.8rem 0;
+}
+
+.member-img {
+  height: auto;
+  width: 100%;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  margin-bottom: 0.625rem;
+}
+
+.member-name {
+  font-weight: 400;
+  padding-bottom: 0.1875rem;
+}
+
+.member-info {
+  font-size: 0.9rem;
+  font-weight: 300;
+  padding-bottom: 5px;
+  line-height: 1.1;
+}
+
+.social {
+  display: flex;
+  flex-flow: row no-wrap;
+  color: var(--primary-color);
+}
+
+.social a {
+  color: var(--primary-color);
+  margin-right: 0.625rem;
+}
+
+.social .insta:hover,
+.social-media-links .insta:hover {
+  color: #833ab4;
+}
+
+.social .fb:hover,
+.social-media-links .fb:hover {
+  color: #4267b2;
+}
+
+.social .tw:hover,
+.social-media-links .tw:hover {
+  color: #1da1f2;
+}
