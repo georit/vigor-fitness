@@ -86,8 +86,8 @@ function showTestimonies(n) {
 /* === Scroll back to top === */
 function scrollBackToTop() {
   if (
-    document.body.scrollTop > 2900 ||
-    document.documentElement.scrollTop > 2900
+    document.body.scrollTop > 4500 ||
+    document.documentElement.scrollTop > 4500
   ) {
     backToTop.style.display = "block";
   } else {
