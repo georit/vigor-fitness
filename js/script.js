@@ -27,7 +27,7 @@ const dot3 = document.querySelector(".dot-3");
 const dot4 = document.querySelector(".dot-4");
 
 // Slide index
-let testimonialIndex = 1;
+let testimonialIndex = 4;
 
 /* ========== ONLOAD ========= */
 showTestimonies(testimonialIndex);
